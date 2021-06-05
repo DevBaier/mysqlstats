@@ -1,9 +1,6 @@
-name: Build sourcepawn and commit
+name: 🏗️ Build Sourcepawn and commit
 
-on:
-  push:
-    paths:
-      - '**.sp'
+on: push
 
 jobs:
   build:
@@ -15,13 +12,3 @@ jobs:
         with:
           source: './scripting/mysqlstats.sp'
           target: './plugin/mysqlstats.smx'
-
-      - name: Commit files
-        run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
-          git commit -m "Compile sourcepawn" -a
-      - name: Push changes
-        uses: ad-m/github-push-action@master
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
