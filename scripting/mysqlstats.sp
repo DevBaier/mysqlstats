@@ -241,11 +241,11 @@ public void Event_PlayerDeath(Event e, const char[] name, bool dontBroadcast) {
 public void Event_PlayerSpawn(Event e, const char[] name, bool dontBroadcast) {
 	int client = GetClientOfUserId(GetEventInt(e, "userid"));
 	
-	PrintToChat(client, "Kills %d", mS_PlayerKills[client]);
-	PrintToChat(client, "Knife Kills %d", mS_PlayerKnifeKills[client]);
-	PrintToChat(client, "Deaths %d", mS_PlayerDeaths[client]);
-	PrintToChat(client, "HeadShots %d", mS_PlayerHS[client]);
-	PrintToChat(client, "Assist %d", mS_PlayerAssists[client]);
+	//PrintToChat(client, "Kills %d", mS_PlayerKills[client]);
+	//PrintToChat(client, "Knife Kills %d", mS_PlayerKnifeKills[client]);
+	//PrintToChat(client, "Deaths %d", mS_PlayerDeaths[client]);
+	//PrintToChat(client, "HeadShots %d", mS_PlayerHS[client]);
+	//PrintToChat(client, "Assist %d", mS_PlayerAssists[client]);
 }
 
 public void Event_RoundEnd(Event e, const char[] name, bool dontBroadcast) {	
